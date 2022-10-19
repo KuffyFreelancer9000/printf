@@ -1,4 +1,5 @@
-#tdlib.h>
+#include "main.h"
+#include <stdlib.h>
 /**
  *check_for_specifiers-checksifthereisavalidformatspecifier
  *@format:possibleformatspecifier
