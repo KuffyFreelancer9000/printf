@@ -1,5 +1,5 @@
-#include"main.h"
-#include<stdlib.h>
+#include "main.h"
+#include <stdlib.h>
 
 /**
 *print_c-printsachar
@@ -7,9 +7,9 @@
 *
 *Return:always1
 */
-intprint_c(va_listc)
+int print_c(va_listc)
 {
-charch=(char)va_arg(c,int);
+char ch=(char)va_arg(c,int);
 
 _putchar(ch);
 return(1);
@@ -21,10 +21,10 @@ return(1);
 *
 *Return:numberofcharsprinted
 */
-intprint_s(va_lists)
+int print_s(va_lists)
 {
-intcount;
-char*str=va_arg(s,char*);
+int count;
+char *str=va_arg(s,char*);
 
 if(str==NULL)
 str="(null)";
@@ -41,11 +41,11 @@ return(count);
 *
 *Return:numberofcharsprinted(always2)
 */
-staticinthex_print(charc)
+static int hex_print(charc)
 {
-intcount;
-chardiff='A'-':';
-chard[2];
+int count;
+char diff='A'-':';
+char d[2];
 
 d[0]=c/16;
 d[1]=c%16;
@@ -65,11 +65,11 @@ return(count);
 *
 *Return:numberofcharsprinted
 */
-intprint_S(va_listS)
+int print_S(va_listS)
 {
-unsignedinti;
-intcount=0;
-char*str=va_arg(S,char*);
+unsigned int i;
+int count=0;
+char *str=va_arg(S,char*);
 
 if(str==NULL)
 str="(null)";
@@ -97,10 +97,10 @@ return(count);
 *
 *Return:numberofcharsprinted
 */
-intprint_r(va_listr)
+int print_r(va_listr)
 {
-char*str;
-inti,count=0;
+char *str;
+int i, count=0;
 
 str=va_arg(r,char*);
 if(str==NULL)

@@ -7,9 +7,9 @@
 *
 *Return:pointertovalidfunctionorNULL
 */
-staticint(*check_for_specifiers(constchar*format))(va_list)
+static int(*check_for_specifiers(const char*format))(va_list)
 {
-unsignedinti;
+unsigned int i;
 print_tp[]={
 {"c",print_c},
 {"s",print_s},
@@ -43,10 +43,10 @@ return(p[i].f);
 *
 *Return:numberofcharactersprinted
 */
-int_printf(constchar*format,...)
+int _printf(constchar*format,...)
 {
-unsignedinti=0,count=0;
-va_listvalist;
+unsigned int i=0,count=0;
+va_list valist;
 int(*f)(va_list);
 
 if(format==NULL)
